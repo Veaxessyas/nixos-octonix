@@ -1,0 +1,85 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["cpu", "memory", "temperature", "pulseaudio", "tray", "battery", "custom/powermenu"],
+
+  "hyprland/workspaces": {
+    "persistent_workspaces": true,
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "active": "",
+      "urgent": "",
+    }
+  },
+
+  "window": {},
+
+  "cpu": {
+    "format": "  {usage}%",
+    "interval": 1,
+    "on-click": "gnome-system-monitor"
+  },
+
+  "memory": {
+    "format": "  {used:0.1f}G / {total:0.1f}G",
+    "interval": 1,
+    "on-click": "gnome-system-monitor"
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "  {temperatureC}°C",
+    "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
+    "interval": 1
+  },
+
+  "clock": {
+    "format": "  {:%H:%M}",
+    "tooltip-format": "{:%Y-%m-%d}",
+    "interval": 60,
+    "on-click": "gnome-clocks"
+  },
+
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "format-muted": "",
+    "on-click": "pavucontrol"
+  },
+
+  "battery": {
+    "bat": "BAT0",
+    "adapter": "AC",
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-full": "  {capacity}%",
+    "format-icons": {
+            "charging": [""],
+            "full": [""],
+            "default": ["", "", "", "", ""]
+        },
+    "tooltip": true,
+    "interval": 1,
+    "states": {
+            "warning": 25,
+            "critical": 15
+        }
+  },
+
+  "tray": {
+    "format-wifi": "   ",
+    "tooltip": true,
+    "icon-size": 18,
+    "spacing": 10
+  },
+
+  "custom/powermenu": {
+    "format": " ⏻ ",
+    "tooltip": "Power Menu",
+    "on-click": "~/.config/waybar/scripts/powermenu.sh",
+    "interval": 3600
+  }
+}
