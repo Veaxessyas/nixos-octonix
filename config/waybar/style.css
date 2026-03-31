@@ -1,0 +1,103 @@
+/* General Bar Style */
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 13px;
+    min-height: 30px;
+    border: none;
+}
+
+/* Bar container */
+#waybar {
+    background-color: transparent;
+    padding: 0 20px;
+}
+
+/* Workspaces section */
+#workspaces {
+    margin-top: 4px;
+    border-radius: 10px;
+    background-color: #eff1f5;
+}
+
+/* Inactive workspace */
+#workspaces button {
+    padding: 0 6px;
+    color: #5c5f77;
+}
+
+/* Active workspace */
+#workspaces button.active {
+    color: #1e66f5;
+}
+
+/* Urgent workspace */
+#workspaces button.urgent {
+    color: #d20f39;
+}
+
+/* Modules spacing */
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 0 6px;
+}
+
+/* Individual modules */
+#custom-powermenu,
+#pulseaudio,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#clock,
+#tray {
+    color: #4c4f69;
+    margin: 0 2px;
+    margin-top: 4px;
+    font-weight: bold;
+    padding: 0 6px;
+    border-radius: 10px;
+    background-color: #eff1f5;
+}
+
+/* Window title */
+#window {
+    color: #4c4f69;
+    margin: 0 10px;
+    margin-top: 4px;
+    font-style: italic;
+    font-weight: bold;
+    padding: 0 12px;
+    border-radius: 10px;
+    background-color: #eff1f5;
+}
+
+/* Hover effects */
+#tray:hover,
+#custom-powermenu:hover,
+#pulseaudio:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#clock:hover {
+    background-color: rgba(220, 224, 232, 0.6);
+}
+
+#custom-powermenu:hover {
+    color: #ea76cb;
+}
+
+/* Temperature critical */
+#temperature.critical {
+    color: #d20f39;
+}
+
+/* Battery states */
+#battery.warning {
+    color: #fe640b;
+}
+
+#battery.critical {
+    color: #d20f39;
+}
